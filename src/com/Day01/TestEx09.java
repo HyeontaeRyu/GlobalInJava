@@ -14,7 +14,7 @@ public class TestEx09 {
         double weight;
         boolean isMarried;
 
-
+/*
         System.out.println("이름을 입력하세요 : ");
         name = sc.nextLine();
         System.out.println("거주 도시를 입력하세요 : ");
@@ -25,6 +25,14 @@ public class TestEx09 {
         weight = sc.nextDouble();
         System.out.println("결혼 여부를 입력하세요 : ");
         isMarried = sc.nextBoolean();
+*/
+        System.out.println("이름, 거주 도시, 나이, 몸무게, 결혼 여부(기혼:true, 미혼:false)를 빈 칸으로 구분하여 입력하시오 : ");
+        name = sc.next();
+        city = sc.next();
+        age = sc.nextInt();
+        weight = sc.nextDouble();
+        isMarried = sc.nextBoolean();
+        
 
         String isMarriedStr;
         if (isMarried) {

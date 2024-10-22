@@ -38,6 +38,5 @@ public class TestEx09 {
         System.out.println("나이 : " + age);
         System.out.println("몸무게 : " + weight);
         System.out.println("결혼 여부 : " + isMarriedStr);
-        
     }
 }

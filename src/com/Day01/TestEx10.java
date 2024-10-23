@@ -20,19 +20,26 @@ public class TestEx10 {
         science = sc.nextInt();
 
         // avg = (double) (kor + eng + math + society + science) / 5;
-        avg = calAvg(kor, eng, math, society, science);
+//        avg = calAvg(kor, eng, math, society, science);
+        avg = calAvg(kor, eng);
         System.out.printf("평균 점수는 %.1f 입니다.", avg);
 
     }
 
-    public static double calAvg(int... scores) {
-        // List<int> scores 랑 같음
+    public static double calAvg(int... integers) {
+        // List<int> integers 랑 같음
         int sum = 0;
-        for (int score : scores) {
-            sum += score;
+        for (int integer : integers) {
+            sum += integer;
         }
+        double avg = (double) sum / integers.length;
+        return Math.floor(avg * 10) / 10.0;
+    }
 
-        return (double) sum / scores.length;
+    public static double calAvg(int sum, char count) {
+        int intCount = Integer.parseInt(String.valueOf(count));
+        double avg = (double) sum / intCount;
+        return Math.floor(avg * 10) / 10.0;
     }
 
 

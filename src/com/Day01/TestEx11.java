@@ -2,7 +2,7 @@ package com.Day01;
 
 import java.io.IOException;
 
-public class Test11 {
+public class TestEx11 {
     public static void main(String[] args) throws IOException {
         int num1, num2;
         System.out.println("숫자 입력 : ");

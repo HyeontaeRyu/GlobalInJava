@@ -33,7 +33,20 @@ public class oprEx07 {
 
         // 4로 떨어지면 윤년
         // 100으로 떨어지며 400으로 나누어 떨어지지 않으면 윤년 아님
-        return year % 4 == 0 && (year % 100 != 0 || (year % 400 == 0));
+        // return year % 4 == 0 && (year % 100 != 0 || (year % 400 == 0));
         // return year % 4 == 0 ? (year % 100 != 0 ? true : (year % 400 != 0 ? false : true)) : false;
+        if (year % 4 == 0) {
+            if (year % 100 != 0) {
+                return true;
+            } else {
+                if (year % 400 != 0) {
+                    return false;
+                } else {
+                    return false;
+                }
+            }
+        } else {
+            return false;
+        }
     }
 }

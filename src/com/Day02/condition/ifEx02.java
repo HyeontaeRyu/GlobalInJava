@@ -25,6 +25,7 @@ public class ifEx02 {
             b = c;
             c = temp;
         }*/
+        /*
         if (a < b) {
             int temp = a;
             a = b;
@@ -40,7 +41,31 @@ public class ifEx02 {
             b = c;
             c = temp;
         }
-        System.out.printf("%d%d%d", a, b, c);
+        */
+        if (a > b) {
+            a = a ^ b;
+            b = a ^ b;
+            a = a ^ b;
+        }
+        if (a > c) {
+            a = a ^ b;
+            c = a ^ b;
+            a = a ^ b;
+        }
+        if (b > c) {
+            b = b ^ c;
+            c = b ^ c;
+            b = b ^ c;
+        }
+
+        //1010
+        //1100
+
+        //0110
+
+        //1010
+        //1100
+        System.out.printf("%d %d %d", a, b, c);
 
     }
 

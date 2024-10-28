@@ -13,7 +13,10 @@ public class for09 {
         Scanner sc = new Scanner(System.in);
 
         // 입력 받을 변수 선언
-        int input = sc.nextInt();
+        int input;
+
+        // 입력 받아 변수에 대입
+        input = sc.nextInt();
 
         // 결과값을 저장할 변수 선언 및 초기화 (3의 0승은 1이므로 1로 초기화)
         int total = 1;

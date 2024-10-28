@@ -35,6 +35,7 @@ public class TestEx10 {
         double avg = (double) sum / integers.length;
         return Math.floor(avg * 10) / 10.0;
     }
+    
 
     public static double calAvg(int sum, char count) {
         int intCount = Integer.parseInt(String.valueOf(count));

@@ -23,10 +23,14 @@ public class task1 {
                 a += 6;
             }
             // a += (i % 2 == 0) ? 6 : 0;
+
+
         }
     }
 
     public static void printa(int a) {
         System.out.print(a + ((a < 10) ? "  " : " "));
     }
+
+
 }

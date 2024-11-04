@@ -8,21 +8,7 @@ public class task2 {
         System.out.println("한 행에 표시할 단 입력.");
         int input = sc.nextInt();
         sc.close();
-        /*int i = 1, j = 2;
-        while (j < 10) {
-            while (i <= input) {
-                System.out.printf("%d * %d = %2d\t\t", i, j, i * j);
-                i++;
-            }
-            i = 2;
-
-                *//*input += input;
-                if (input > 9) {
-                    input = 9;
-                }*//*
-            System.out.println();
-            j++;
-        }*/
+        
         int temp = 2;
         for (int i = 2; i < 10; i += input) {
             temp += input;

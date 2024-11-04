@@ -15,19 +15,17 @@ public class arrEx04 {
 
             do {
                 inputStr = sc.nextLine();
-                if (inputStr.equals("그만")) {
+                if (inputStr.equals("그만"))
                     return;
-                }
-                if (!inputStr.equals("가위") && !inputStr.equals("바위") && !inputStr.equals("보")) {
+                if (!inputStr.equals("가위") && !inputStr.equals("바위") && !inputStr.equals("보"))
                     System.out.println("가위, 바위 혹은 보 중 하나를 입력해주세요.");
-                }
             } while (!inputStr.equals("가위") && !inputStr.equals("바위") && !inputStr.equals("보"));
 
-            if (inputStr.equals(st[1])) {
+            if (inputStr.equals(st[1]))
                 input = 1;
-            } else if (inputStr.equals(st[2])) {
+            else if (inputStr.equals(st[2]))
                 input = 2;
-            }
+
 
             int com = (int) (Math.random() * 3);
 

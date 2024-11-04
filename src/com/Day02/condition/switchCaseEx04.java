@@ -10,9 +10,11 @@ public class switchCaseEx04 {
         String user = "";
         String[] options = {"가위", "바위", "보"};
         boolean valid = false;
+
         do {
             System.out.println("가위 바위 보 중 하나 입력.");
             user = sc.nextLine();
+
             for (String option : options) {
                 if (option.equals(user)) {
                     valid = true;

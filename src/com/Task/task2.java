@@ -9,11 +9,11 @@ public class task2 {
         int input = sc.nextInt();
         sc.close();
         
-        int temp = 2;
+        
         for (int i = 2; i < 10; i += input) {
-            temp += input;
+            
             for (int j = 1; j <= 9; j++) {
-                for (int k = i; k < temp && k < 10; k++) {
+                for (int k = i; k < i +input && k < 10; k++) {
                     System.out.printf("%d * %d = %2d\t\t", k, j, k * j);
 
                 }

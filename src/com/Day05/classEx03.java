@@ -45,6 +45,10 @@ class Tv {
     private int inch;
     private String company;
 
+    public Tv() {
+
+    }
+
     public Tv(int year, int inch, String company) {
         this.year = year;
         this.inch = inch;

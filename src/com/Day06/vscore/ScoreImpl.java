@@ -1,6 +1,5 @@
 package com.Day06.vscore;
 
-import java.util.Iterator;
 import java.util.Scanner;
 import java.util.Vector;
 
@@ -14,7 +13,7 @@ public class ScoreImpl implements Score {
         System.out.println("\n 자료 추가 ............");
         String hak;
 
-        System.out.println("학번 입력 : ");
+        System.out.print("학번 입력 : ");
         hak = sc.next();
         ScoreVO temp = readScore(hak);
         if (temp != null) {
@@ -24,19 +23,19 @@ public class ScoreImpl implements Score {
         ScoreVO vo = new ScoreVO();
         vo.setHak(hak);
 
-        System.out.println("이름 입력 : ");
+        System.out.print("이름 입력 : ");
         vo.setName(sc.next());
 
-        System.out.println("생년월일 입력 : ");
+        System.out.print("생년월일 입력 : ");
         vo.setBirth(sc.next());
 
-        System.out.println("국어 점수 입력 : ");
+        System.out.print("국어 점수 입력 : ");
         vo.setKor(sc.nextInt());
 
-        System.out.println("영어 점수 입력 : ");
+        System.out.print("영어 점수 입력 : ");
         vo.setEng(sc.nextInt());
 
-        System.out.println("수학 점수 입력 : ");
+        System.out.print("수학 점수 입력 : ");
         vo.setMat(sc.nextInt());
 
         vo.setTot(vo.getKor() + vo.getEng() + vo.getMat());
@@ -48,32 +47,85 @@ public class ScoreImpl implements Score {
 
     @Override
     public void update() {
+        System.out.println("\n 자료 수정 ............");
+        System.out.print("학번 입력 : ");
+        String hak = sc.next();
+        ScoreVO vo = readScore(hak);
+        if (vo == null) {
+            System.out.println("등록되지 않은 학번입니다.");
+            return;
+        }
+        System.out.print("이름 입력 : ");
+        vo.setName(sc.next());
 
+        System.out.print("생년월일 입력 : ");
+        vo.setBirth(sc.next());
+
+        System.out.print("국어 점수 입력 : ");
+        vo.setKor(sc.nextInt());
+
+        System.out.print("영어 점수 입력 : ");
+        vo.setEng(sc.nextInt());
+
+        System.out.print("수학 점수 입력 : ");
+        vo.setMat(sc.nextInt());
+
+        vo.setTot(vo.getKor() + vo.getEng() + vo.getMat());
+        System.out.println("자료 수정 완료");
     }
 
     @Override
     public void listAll() {
         System.out.println("\n 전체 자료 출력 ............");
-        System.out.println("학번\t이름\t생년월일\t국어\t영어\t수학\t총점");
 
-        Iterator<ScoreVO> it = list.iterator();
-        while (it.hasNext()) {
-            ScoreVO v = it.next();
+        for (ScoreVO v : list) {
+            System.out.println(v);
         }
     }
 
     @Override
     public void delete() {
-
+        System.out.println("\n 자료 삭제 ............");
+        System.out.print("학번 입력 : ");
+        String hak = sc.next();
+        ScoreVO vo = readScore(hak);
+        if (vo == null) {
+            System.out.println("등록되지 않은 학번입니다.");
+            return;
+        }
+        list.remove(vo);
+        System.out.println("자료 삭제 완료");
     }
 
     @Override
     public void searchHak() {
+        System.out.println("\n 학번 검색 ............");
+        System.out.print("학번 입력 : ");
+        String hak = sc.next();
+        ScoreVO vo = readScore(hak);
+        if (vo == null) {
+            System.out.println("등록되지 않은 학번입니다.");
+            return;
+        }
+        System.out.println(vo);
 
     }
 
     @Override
     public void searchName() {
+        System.out.println("\n 이름 검색 ............");
+        System.out.print("이름 입력 : ");
+        String name = sc.next();
+        boolean flag = false;
+        for (ScoreVO v : list) {
+            if (v.getName().equals(name)) {
+                System.out.println(v);
+                flag = true;
+            }
+        }
+        if (!flag) {
+            System.out.println("등록되지 않은 이름입니다.");
+        }
 
     }
 

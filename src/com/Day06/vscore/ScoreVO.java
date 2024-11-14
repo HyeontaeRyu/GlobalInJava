@@ -62,7 +62,7 @@ public class ScoreVO {
 
     @Override
     public String toString() {
-        return String.format("%7s%10s%5d%5d%5d%5d%6.1f", hak, name, kor, eng, mat, getTot(), (float) getTot() / 3);
+        return String.format("%7s%10s%6s%5d%5d%5d%5d%6.1f", hak, name, birth, kor, eng, mat, getTot(), (float) getTot() / 3);
 
     }
 }
